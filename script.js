@@ -34,115 +34,118 @@
     // ==========================================
     // SERVICE MODAL
     // ==========================================
-    const modal = document.getElementById("serviceModal");
-    const serviceCards = document.querySelectorAll(".service-card");
-    const closeModalBtn = document.querySelector(".close-modal");
+        // ==========================================
+// SERVICE MODAL
+// ==========================================
 
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDesc = document.getElementById("modalDesc");
-    const modalIncludesText = document.getElementById("modalIncludesText");
-    const modalBookBtn = document.getElementById("modalBookBtn");
+const modal = document.getElementById("serviceModal");
+const serviceCards = document.querySelectorAll(".service-card");
 
+const closeModalBtn = document.querySelector(".close-modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalIncludesText = document.getElementById("modalIncludesText");
+const modalBookBtn = document.getElementById("modalBookBtn");
 
-    // Check whether modal elements exist
-    if (
-        modal &&
-        serviceCards.length > 0 &&
-        closeModalBtn &&
-        modalTitle &&
-        modalDesc &&
-        modalIncludesText
-    ) {
+function openServiceModal(card) {
 
-        // Open Modal
-        function openModal(title, desc, includes) {
+    if (!modal) return;
 
-            modalTitle.textContent = title || "Service";
-            modalDesc.textContent = desc || "Service information.";
-            modalIncludesText.textContent = includes || "Please contact us for more information.";
+    const title = card.getAttribute("data-title");
+    const desc = card.getAttribute("data-desc");
+    const includes = card.getAttribute("data-includes");
 
-            modal.classList.add("show");
-            document.body.classList.add("modal-open");
-        }
-
-
-        // Close Modal
-        function closeModal() {
-
-            modal.classList.remove("show");
-            document.body.classList.remove("modal-open");
-        }
-
-
-        // Service Card Click
-        serviceCards.forEach(function (card) {
-
-            card.addEventListener("click", function () {
-
-                const title = card.getAttribute("data-title");
-                const desc = card.getAttribute("data-desc");
-                const includes = card.getAttribute("data-includes");
-
-                openModal(title, desc, includes);
-            });
-
-
-            // Keyboard support
-            card.addEventListener("keydown", function (event) {
-
-                if (event.key === "Enter" || event.key === " ") {
-
-                    event.preventDefault();
-
-                    const title = card.getAttribute("data-title");
-                    const desc = card.getAttribute("data-desc");
-                    const includes = card.getAttribute("data-includes");
-
-                    openModal(title, desc, includes);
-                }
-            });
-
-        });
-
-
-        // Close using X
-        closeModalBtn.addEventListener("click", closeModal);
-
-
-        // Close by clicking dark background
-        modal.addEventListener("click", function (event) {
-
-            if (event.target === modal) {
-                closeModal();
-            }
-
-        });
-
-
-        // Close using Escape
-        document.addEventListener("keydown", function (event) {
-
-            if (
-                event.key === "Escape" &&
-                modal.classList.contains("show")
-            ) {
-                closeModal();
-            }
-
-        });
-
-
-        // Book Appointment button
-        if (modalBookBtn) {
-
-            modalBookBtn.addEventListener("click", function () {
-                closeModal();
-            });
-
-        }
-
+    if (modalTitle) {
+        modalTitle.textContent = title || "Service Details";
     }
 
+    if (modalDesc) {
+        modalDesc.textContent = desc || "Please contact us for more information.";
+    }
+
+    if (modalIncludesText) {
+        modalIncludesText.textContent =
+            includes || "Please contact us for more information.";
+    }
+
+    modal.classList.add("show");
+    document.body.classList.add("modal-open");
+}
+
+function closeServiceModal() {
+
+    if (!modal) return;
+
+    modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+}
+
+
+// Service cards
+serviceCards.forEach(function(card) {
+
+    card.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        openServiceModal(card);
+
+    });
+
+});
+
+
+// Close X
+if (closeModalBtn) {
+
+    closeModalBtn.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        closeServiceModal();
+
+    });
+
+}
+
+
+// Click outside popup
+if (modal) {
+
+    modal.addEventListener("click", function(event) {
+
+        if (event.target === modal) {
+            closeServiceModal();
+        }
+
+    });
+
+}
+
+
+// Escape key
+document.addEventListener("keydown", function(event) {
+
+    if (
+        event.key === "Escape" &&
+        modal &&
+        modal.classList.contains("show")
+    ) {
+        closeServiceModal();
+    }
+
+});
+
+
+// Book Appointment
+if (modalBookBtn) {
+
+    modalBookBtn.addEventListener("click", function() {
+        closeServiceModal();
+    });
+
+}
+    
 
     // ==========================================
     // APPOINTMENT FORM
