@@ -6,745 +6,709 @@
 
     <title>YOUR CLINIC NAME</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ==========================================
-         NAVIGATION
-         ========================================== -->
-    <header class="navbar">
-        <div class="container nav-container">
+<!-- ================= NAVBAR ================= -->
 
-            <a href="#home" class="logo">
-                <i class="fa-solid fa-staff-snake"></i>
-                YOUR CLINIC NAME
-            </a>
+<header class="navbar">
 
-            <div class="nav-toggle" id="navToggle">
-                <i class="fa-solid fa-bars"></i>
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>YOUR CLINIC NAME</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="#home">Home</a>
+            <a href="#about">Doctor</a>
+            <a href="#services">Services</a>
+            <a href="#timings">Timings</a>
+            <a href="#appointment">Appointment</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                Trusted Healthcare for Your Family
             </div>
 
-            <nav class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#timings">Timings</a></li>
-                    <li><a href="#appointment">Appointment</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>
+                Expert Healthcare at
+                <span>YOUR CLINIC NAME</span>
+            </h1>
+
+            <p>
+                Providing compassionate, comprehensive, and modern
+                medical care for you and your family.
+                Your health is our top priority.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="btn btn-primary">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book Appointment
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fa-solid fa-phone"></i>
+                    Contact Us
+                </a>
+
+            </div>
+
+            <div class="hero-trust">
+
+                <div>
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span>Experienced Doctor</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-shield-heart"></i>
+                    <span>Patient-Focused Care</span>
+                </div>
+
+            </div>
 
         </div>
-    </header>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=900&q=80"
+                alt="Professional Healthcare">
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- ==========================================
-         HERO SECTION
-         ========================================== -->
-    <section id="home" class="hero">
+<!-- ================= DOCTOR ================= -->
 
-        <div class="container hero-container">
+<section class="section about" id="about">
 
-            <div class="hero-content">
+    <div class="container">
 
-                <div class="hero-badge">
-                    <i class="fa-solid fa-circle-check"></i>
-                    Trusted Healthcare for Your Family
-                </div>
+        <div class="section-title">
 
-                <h1>
-                    Expert Healthcare at
-                    <br>
-                    <span>YOUR CLINIC NAME</span>
-                </h1>
+            <h2>Meet Your Doctor</h2>
 
-                <p>
-                    Providing compassionate, comprehensive, and modern
-                    medical care for you and your family.
-                    Your health is our top priority.
-                </p>
+            <p>
+                Experienced care with a patient-first approach
+            </p>
 
-                <div class="hero-btns">
+            <div class="underline"></div>
 
-                    <a href="#appointment" class="btn btn-primary">
-                        <i class="fa-solid fa-calendar-check"></i>
-                        Book Appointment
-                    </a>
-
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fa-solid fa-phone"></i>
-                        Contact Us
-                    </a>
-
-                </div>
-
-                <div class="hero-trust">
-
-                    <div>
-                        <i class="fa-solid fa-user-doctor"></i>
-                        <span>Experienced Doctor</span>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-shield-heart"></i>
-                        <span>Patient-Focused Care</span>
-                    </div>
-
-                </div>
-
-            </div>
+        </div>
 
 
-            <div class="hero-image">
+        <div class="about-grid">
+
+            <div class="doctor-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Professional Healthcare">
+                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=80"
+                    alt="YOUR DOCTOR NAME">
 
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==========================================
-         ABOUT / DOCTOR
-         ========================================== -->
-    <section id="about" class="about section-padding">
-
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Meet Your Doctor</h2>
-
-                <p>
-                    Experienced care with a patient-first approach
-                </p>
-
-                <div class="underline"></div>
-
-            </div>
-
-
-            <div class="about-container">
-
-
-                <div class="about-image">
-
-                    <div class="doctor-image-card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="YOUR DOCTOR NAME">
-
-                        <div class="doctor-badge">
-
-                            <i class="fa-solid fa-circle-check"></i>
-
-                            Professional Medical Care
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-content">
-
-                    <span class="about-label">
-
-                        <i class="fa-solid fa-user-doctor"></i>
-
-                        YOUR DOCTOR NAME
-
-                    </span>
-
-
-                    <h3>
-                        Dedicated to Your Health & Well-Being
-                    </h3>
-
-
-                    <p class="description">
-
-                        Dedicated and compassionate medical professional
-                        committed to providing personalized, reliable,
-                        and patient-focused healthcare using modern
-                        medical practices.
-
-                    </p>
-
-
-                    <div class="doctor-info">
-
-
-                        <div class="doctor-info-item">
-
-                            <i class="fa-solid fa-graduation-cap"></i>
-
-                            <div>
-
-                                <strong>Qualification</strong>
-
-                                <span>
-                                    MBBS, MD (General Medicine)
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="doctor-info-item">
-
-                            <i class="fa-solid fa-briefcase-medical"></i>
-
-                            <div>
-
-                                <strong>Experience</strong>
-
-                                <span>
-                                    15+ Years of Experience
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-                    <a href="#appointment"
-                       class="btn btn-primary doctor-btn">
-
-                        <i class="fa-solid fa-calendar-check"></i>
-
-                        Book an Appointment
-
-                    </a>
-
+                <div class="doctor-badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Professional Medical Care
                 </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <div class="about-content">
 
-
-    <!-- ==========================================
-         SERVICES
-         ========================================== -->
-    <section id="services"
-             class="services bg-light section-padding">
-
-        <div class="container">
-
-
-            <div class="section-title">
-
-                <h2>Our Services</h2>
-
-                <p>
-                    Quality healthcare services designed around your needs
-                </p>
-
-                <div class="underline"></div>
-
-            </div>
-
-
-            <div class="services-grid">
-
-
-                <!-- SERVICE 1 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="General Consultation"
-
-                     data-desc="Comprehensive medical evaluation and treatment for common health concerns."
-
-                     data-includes="Initial consultation, symptom evaluation, basic medical advice, treatment guidance, and follow-up recommendations.">
-
-                    <i class="fa-solid fa-stethoscope"></i>
-
-                    <h3>
-                        General Consultation
-                    </h3>
-
-                    <p>
-                        Professional evaluation and treatment
-                        for everyday health concerns.
-                    </p>
-
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <!-- SERVICE 2 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="Health Checkup"
-
-                     data-desc="Regular health checkups to monitor your overall well-being."
-
-                     data-includes="Basic health assessment, vital signs review, health risk evaluation, and preventive healthcare guidance.">
-
-                    <i class="fa-solid fa-heart-pulse"></i>
-
-                    <h3>
-                        Health Checkup
-                    </h3>
-
-                    <p>
-                        Regular checkups to monitor your health
-                        and identify concerns early.
-                    </p>
-
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <!-- SERVICE 3 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="Specialist Consultation"
-
-                     data-desc="Targeted medical consultation for specific health conditions."
-
-                     data-includes="Detailed discussion of your condition, medical assessment, specialist guidance, and recommended next steps.">
-
+                <div class="doctor-name">
                     <i class="fa-solid fa-user-doctor"></i>
+                    YOUR DOCTOR NAME
+                </div>
 
-                    <h3>
-                        Specialist Consultation
-                    </h3>
+                <h3>
+                    Dedicated to Your Health & Well-Being
+                </h3>
 
-                    <p>
-                        Expert guidance and targeted care
-                        for specific medical conditions.
-                    </p>
+                <p>
+                    Dedicated and compassionate medical professional
+                    committed to providing personalized, reliable,
+                    and patient-focused healthcare using modern
+                    medical practices.
+                </p>
 
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
+
+                <div class="doctor-info">
+
+                    <div class="info-box">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <div>
+                            <strong>Qualification</strong>
+                            <span>MBBS, MD (General Medicine)</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <i class="fa-solid fa-briefcase-medical"></i>
+
+                        <div>
+                            <strong>Experience</strong>
+                            <span>15+ Years of Experience</span>
+                        </div>
+
+                    </div>
 
                 </div>
 
 
-                <!-- SERVICE 4 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="Follow-up Consultation"
-
-                     data-desc="Continuous care to monitor your recovery and treatment progress."
-
-                     data-includes="Recovery monitoring, treatment progress review, medication discussion, and further care recommendations.">
-
-                    <i class="fa-solid fa-clipboard-user"></i>
-
-                    <h3>
-                        Follow-up Consultation
-                    </h3>
-
-                    <p>
-                        Ongoing monitoring of your treatment
-                        and recovery progress.
-                    </p>
-
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <!-- SERVICE 5 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="Preventive Care"
-
-                     data-desc="Healthcare guidance focused on prevention and long-term wellness."
-
-                     data-includes="Preventive health guidance, vaccination information, lifestyle recommendations, and general wellness support.">
-
-                    <i class="fa-solid fa-shield-virus"></i>
-
-                    <h3>
-                        Preventive Care
-                    </h3>
-
-                    <p>
-                        Preventive guidance and healthy lifestyle
-                        support for long-term wellness.
-                    </p>
-
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <!-- SERVICE 6 -->
-                <div class="service-card"
-                     role="button"
-                     tabindex="0"
-
-                     data-title="Health Advice"
-
-                     data-desc="Practical guidance for maintaining a healthier lifestyle."
-
-                     data-includes="General wellness advice, nutrition guidance, physical activity recommendations, and healthy lifestyle tips.">
-
-                    <i class="fa-solid fa-apple-whole"></i>
-
-                    <h3>
-                        Health Advice
-                    </h3>
-
-                    <p>
-                        Useful guidance for nutrition, wellness,
-                        and a healthier lifestyle.
-                    </p>
-
-                    <span class="service-link">
-                        View Details
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
+                <a href="#appointment" class="btn btn-primary">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book an Appointment
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ==========================================
-         CLINIC TIMINGS
-         ========================================== -->
-    <section id="timings"
-             class="timings section-padding">
+<!-- ================= SERVICES ================= -->
 
-        <div class="container">
+<section class="section services" id="services">
 
-            <div class="section-title">
+    <div class="container">
 
-                <h2>Clinic Timings</h2>
+        <div class="section-title">
 
-                <div class="underline"></div>
+            <h2>Our Services</h2>
 
+            <p>
+                Quality healthcare services designed around your needs
+            </p>
+
+            <div class="underline"></div>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+            <article class="service-card"
+                data-title="General Consultation"
+                data-desc="Comprehensive medical evaluation and treatment for common health concerns."
+                data-includes="Initial consultation, symptom evaluation, basic medical advice, treatment guidance, and follow-up recommendations.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+
+                <h3>General Consultation</h3>
+
+                <p>
+                    Professional evaluation and treatment for everyday
+                    health concerns.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+
+            <article class="service-card"
+                data-title="Health Checkup"
+                data-desc="Regular health checkups to monitor your overall well-being."
+                data-includes="Basic health assessment, vital signs review, health risk evaluation, and preventive healthcare guidance.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h3>Health Checkup</h3>
+
+                <p>
+                    Regular health checkups to monitor your overall
+                    well-being.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+
+            <article class="service-card"
+                data-title="Specialist Consultation"
+                data-desc="Targeted medical consultation for specific health conditions."
+                data-includes="Detailed discussion of your condition, medical assessment, specialist guidance, and recommended next steps.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+
+                <h3>Specialist Consultation</h3>
+
+                <p>
+                    Targeted medical consultation for specific health
+                    conditions.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+
+            <article class="service-card"
+                data-title="Follow-up Consultation"
+                data-desc="Continuous care to monitor your recovery and treatment progress."
+                data-includes="Recovery monitoring, treatment progress review, medication discussion, and further care recommendations.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+
+                <h3>Follow-up Consultation</h3>
+
+                <p>
+                    Continuous care to monitor your recovery and treatment
+                    progress.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+
+            <article class="service-card"
+                data-title="Preventive Care"
+                data-desc="Healthcare guidance focused on prevention and long-term wellness."
+                data-includes="Preventive health guidance, vaccination information, lifestyle recommendations, and general wellness support.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h3>Preventive Care</h3>
+
+                <p>
+                    Healthcare guidance focused on prevention and
+                    long-term wellness.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+
+            <article class="service-card"
+                data-title="Health Advice"
+                data-desc="Practical guidance for maintaining a healthier lifestyle."
+                data-includes="General wellness advice, nutrition guidance, physical activity recommendations, and healthy lifestyle tips.">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <h3>Health Advice</h3>
+
+                <p>
+                    Practical guidance for maintaining a healthier
+                    lifestyle.
+                </p>
+
+                <button class="service-link" type="button">
+                    View Details
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TIMINGS ================= -->
+
+<section class="section timings" id="timings">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Clinic Timings</h2>
+
+            <p>Plan your visit according to our consultation hours</p>
+
+            <div class="underline"></div>
+
+        </div>
+
+
+        <div class="timing-card">
+
+            <div class="timing-row">
+                <span>Monday - Friday</span>
+                <strong>9:00 AM - 1:00 PM</strong>
             </div>
 
+            <div class="timing-row">
+                <span>Saturday</span>
+                <strong>9:00 AM - 12:00 PM</strong>
+            </div>
 
-            <div class="timings-box">
-
-
-                <div class="timing-row">
-
-                    <span class="day">
-                        Monday - Saturday
-                    </span>
-
-                    <span class="time">
-                        09:00 AM - 08:00 PM
-                    </span>
-
-                </div>
-
-
-                <div class="timing-row sunday">
-
-                    <span class="day">
-                        Sunday
-                    </span>
-
-                    <span class="time">
-                        10:00 AM - 02:00 PM
-                        (By Appointment Only)
-                    </span>
-
-                </div>
-
-
+            <div class="timing-row">
+                <span>Sunday</span>
+                <strong>Closed</strong>
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ==========================================
-         APPOINTMENT
-         ========================================== -->
-    <section id="appointment"
-             class="appointment bg-light section-padding">
+<!-- ================= APPOINTMENT ================= -->
 
-        <div class="container">
+<section class="section appointment" id="appointment">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Book an Appointment</h2>
+
+            <p>
+                Send us your details and our clinic team can contact you.
+            </p>
+
+            <div class="underline"></div>
+
+        </div>
 
 
-            <div class="section-title">
+        <div class="appointment-card">
 
-                <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
 
-                <div class="underline"></div>
-
-            </div>
-
-
-            <div class="form-container">
-
-                <form id="appointmentForm">
-
+                <div class="form-grid">
 
                     <div class="form-group">
-
-                        <label for="patientName">
-                            Patient Name *
-                        </label>
+                        <label for="patientName">Your Name</label>
 
                         <input
                             type="text"
                             id="patientName"
-                            placeholder="Enter full name"
+                            placeholder="Enter your name"
                             required>
-
                     </div>
 
 
                     <div class="form-group">
-
-                        <label for="mobileNumber">
-                            Mobile Number *
-                        </label>
+                        <label for="phone">Phone Number</label>
 
                         <input
                             type="tel"
-                            id="mobileNumber"
-                            placeholder="10-digit mobile number"
-                            pattern="[0-9]{10}"
+                            id="phone"
+                            placeholder="Enter phone number"
                             required>
-
-                    </div>
-
-
-                    <div class="form-row">
-
-
-                        <div class="form-group half">
-
-                            <label for="appDate">
-                                Appointment Date *
-                            </label>
-
-                            <input
-                                type="date"
-                                id="appDate"
-                                required>
-
-                        </div>
-
-
-                        <div class="form-group half">
-
-                            <label for="appTime">
-                                Preferred Time *
-                            </label>
-
-                            <select id="appTime" required>
-
-                                <option value=""
-                                        disabled
-                                        selected>
-                                    Select Time
-                                </option>
-
-                                <option value="Morning">
-                                    Morning (9 AM - 1 PM)
-                                </option>
-
-                                <option value="Afternoon">
-                                    Afternoon (2 PM - 5 PM)
-                                </option>
-
-                                <option value="Evening">
-                                    Evening (5 PM - 8 PM)
-                                </option>
-
-                            </select>
-
-                        </div>
-
                     </div>
 
 
                     <div class="form-group">
+                        <label for="date">Preferred Date</label>
 
-                        <label for="reason">
-                            Reason for Visit
-                        </label>
-
-                        <textarea
-                            id="reason"
-                            rows="4"
-                            placeholder="Briefly describe your symptoms or reason for visit"></textarea>
-
+                        <input
+                            type="date"
+                            id="date"
+                            required>
                     </div>
 
 
-                    <button
-                        type="submit"
-                        class="btn btn-primary btn-block">
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
 
-                        Confirm Booking Enquiry
+                        <select id="time" required>
 
-                    </button>
+                            <option value="">
+                                Select time
+                            </option>
 
+                            <option>9:00 AM - 10:00 AM</option>
+                            <option>10:00 AM - 11:00 AM</option>
+                            <option>11:00 AM - 12:00 PM</option>
+                            <option>12:00 PM - 1:00 PM</option>
 
-                </form>
+                        </select>
 
-
-                <div id="formSuccess"
-                     class="form-success hidden">
-
-                    <i class="fa-solid fa-circle-check"></i>
-
-                    <h3>
-                        Request Received!
-                    </h3>
-
-                    <p>
-                        Thank you. We have received your appointment
-                        enquiry. Our team will contact you shortly
-                        to confirm the exact time.
-                    </p>
+                    </div>
 
                 </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea
+                        id="message"
+                        rows="4"
+                        placeholder="Tell us briefly about your concern"></textarea>
+
+                </div>
+
+
+                <button class="btn btn-primary submit-btn" type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Appointment Request
+
+                </button>
+
+            </form>
+
+
+            <div class="form-success hidden" id="formSuccess">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>Request Submitted</h3>
+
+                <p>
+                    Thank you. This demo form has received your request.
+                    The clinic can contact you using the details provided.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="newAppointment">
+
+                    Make Another Request
+
+                </button>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ==========================================
-         CONTACT
-         ========================================== -->
-    <section id="contact"
-             class="contact section-padding">
+<!-- ================= CONTACT ================= -->
 
-        <div class="container">
+<section class="section contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact Us</h2>
+
+            <p>We're here to help you with your healthcare needs</p>
+
+            <div class="underline"></div>
+
+        </div>
 
 
-            <div class="section-title">
+        <div class="contact-grid">
 
-                <h2>Contact Us</h2>
+            <div class="contact-box">
 
-                <div class="underline"></div>
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Clinic Address</h3>
+
+                <p>YOUR CLINIC ADDRESS</p>
 
             </div>
 
 
-            <div class="contact-container">
+            <div class="contact-box">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Phone</h3>
+
+                <p>YOUR PHONE NUMBER</p>
+
+            </div>
 
 
-                <div class="contact-info">
+            <div class="contact-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <p>YOUR EMAIL</p>
+
+            </div>
 
 
-                    <div class="info-item">
+            <div class="contact-box">
 
-                        <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-brands fa-whatsapp"></i>
 
-                        <div>
+                <h3>WhatsApp</h3>
 
-                            <h4>Address</h4>
+                <p>YOUR WHATSAPP NUMBER</p>
 
-                            <p>
-                                YOUR CLINIC ADDRESS
-                            </p>
+            </div>
 
-                        </div>
+        </div>
 
-                    </div>
+    </div>
 
-
-                    <div class="info-item">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        <div>
-
-                            <h4>Call Us</h4>
-
-                            <p>
-                                YOUR PHONE NUMBER
-                            </p>
-
-                        </div>
-
-                    </div>
+</section>
 
 
-                    <div class="info-item">
+<!-- ================= SERVICE MODAL ================= -->
 
-                        <i class="fa-solid fa-envelope"></i>
+<div class="modal" id="serviceModal">
 
-                        <div>
+    <div class="modal-content">
 
-                            <h4>Email Us</h4>
+        <button
+            class="close-modal"
+            id="closeModal"
+            type="button"
+            aria-label="Close">
 
-                            <p>
-                                YOUR EMAIL
-                            </p>
+            <i class="fa-solid fa-xmark"></i>
 
-                        </div>
-
-                    </div>
+        </button>
 
 
-                    <div class="info-item">
+        <div class="modal-icon">
 
-                        <a
-                            href="https://wa.me/YOUR WHATSAPP NUMBER"
-                            target="_blank"
-                            class=
+            <i class="fa-solid fa-stethoscope"></i>
+
+        </div>
+
+
+        <h2 id="modalTitle">Service Details</h2>
+
+        <p id="modalDesc">
+            Service information will appear here.
+        </p>
+
+
+        <div class="modal-includes">
+
+            <h4>
+                <i class="fa-solid fa-circle-check"></i>
+                What it includes
+            </h4>
+
+            <p id="modalIncludesText">
+                Service details will appear here.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="btn btn-primary modal-book-btn"
+            id="modalBookBtn">
+
+            <i class="fa-solid fa-calendar-check"></i>
+            Book Appointment
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <h3>YOUR CLINIC NAME</h3>
+            <p>Compassionate healthcare for you and your family.</p>
+        </div>
+
+        <div class="footer-contact">
+            <span>YOUR PHONE NUMBER</span>
+            <span>YOUR EMAIL</span>
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © <span id="currentYear"></span>
+        YOUR CLINIC NAME. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+                    </html>
