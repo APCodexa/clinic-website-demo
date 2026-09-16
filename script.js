@@ -1,4 +1,4 @@
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     // ==========================================
     // MOBILE NAVIGATION
@@ -7,11 +7,12 @@
     const navMenu = document.getElementById("navMenu");
 
     if (navToggle && navMenu) {
+
         navToggle.addEventListener("click", function () {
             navMenu.classList.toggle("active");
         });
 
-        const navLinks = document.querySelectorAll(".nav-menu a");
+        const navLinks = navMenu.querySelectorAll("a");
 
         navLinks.forEach(function (link) {
             link.addEventListener("click", function () {
@@ -22,136 +23,127 @@
 
 
     // ==========================================
-    // CURRENT YEAR
-    // ==========================================
-    const yearSpan = document.getElementById("year");
-
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-
-
-    // ==========================================
     // SERVICE MODAL
     // ==========================================
-        // ==========================================
-// SERVICE MODAL
-// ==========================================
+    const modal = document.getElementById("serviceModal");
+    const serviceCards = document.querySelectorAll(".service-card");
 
-const modal = document.getElementById("serviceModal");
-const serviceCards = document.querySelectorAll(".service-card");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalIncludes = document.getElementById("modalIncludesText");
 
-const closeModalBtn = document.querySelector(".close-modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalDesc = document.getElementById("modalDesc");
-const modalIncludesText = document.getElementById("modalIncludesText");
-const modalBookBtn = document.getElementById("modalBookBtn");
+    const closeModalBtn = document.querySelector(".close-modal");
+    const modalBookBtn = document.getElementById("modalBookBtn");
 
-function openServiceModal(card) {
+    function openModal(card) {
 
-    if (!modal) return;
+        if (!modal) return;
 
-    const title = card.getAttribute("data-title");
-    const desc = card.getAttribute("data-desc");
-    const includes = card.getAttribute("data-includes");
+        const title = card.getAttribute("data-title");
+        const desc = card.getAttribute("data-desc");
+        const includes = card.getAttribute("data-includes");
 
-    if (modalTitle) {
-        modalTitle.textContent = title || "Service Details";
+        if (modalTitle) {
+            modalTitle.textContent = title || "Service Details";
+        }
+
+        if (modalDesc) {
+            modalDesc.textContent =
+                desc || "Please contact us for more information.";
+        }
+
+        if (modalIncludes) {
+            modalIncludes.textContent =
+                includes || "Please contact us for more information.";
+        }
+
+        modal.classList.add("show");
+        document.body.classList.add("modal-open");
     }
 
-    if (modalDesc) {
-        modalDesc.textContent = desc || "Please contact us for more information.";
+
+    function closeModal() {
+
+        if (!modal) return;
+
+        modal.classList.remove("show");
+        document.body.classList.remove("modal-open");
     }
 
-    if (modalIncludesText) {
-        modalIncludesText.textContent =
-            includes || "Please contact us for more information.";
-    }
 
-    modal.classList.add("show");
-    document.body.classList.add("modal-open");
-}
+    serviceCards.forEach(function (card) {
 
-function closeServiceModal() {
+        card.addEventListener("click", function () {
+            openModal(card);
+        });
 
-    if (!modal) return;
+        card.addEventListener("keydown", function (event) {
 
-    modal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-}
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openModal(card);
+            }
 
-
-// Service cards
-serviceCards.forEach(function(card) {
-
-    card.addEventListener("click", function(event) {
-
-        event.preventDefault();
-        event.stopPropagation();
-
-        openServiceModal(card);
+        });
 
     });
 
-});
+
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", closeModal);
+    }
 
 
-// Close X
-if (closeModalBtn) {
+    if (modal) {
 
-    closeModalBtn.addEventListener("click", function(event) {
+        modal.addEventListener("click", function (event) {
 
-        event.preventDefault();
-        closeServiceModal();
+            if (event.target === modal) {
+                closeModal();
+            }
 
-    });
+        });
 
-}
+    }
 
 
-// Click outside popup
-if (modal) {
+    document.addEventListener("keydown", function (event) {
 
-    modal.addEventListener("click", function(event) {
-
-        if (event.target === modal) {
-            closeServiceModal();
+        if (event.key === "Escape") {
+            closeModal();
         }
 
     });
 
-}
 
+    if (modalBookBtn) {
 
-// Escape key
-document.addEventListener("keydown", function(event) {
+        modalBookBtn.addEventListener("click", function () {
 
-    if (
-        event.key === "Escape" &&
-        modal &&
-        modal.classList.contains("show")
-    ) {
-        closeServiceModal();
+            closeModal();
+
+            const appointmentSection =
+                document.getElementById("appointment");
+
+            if (appointmentSection) {
+                appointmentSection.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+
+        });
+
     }
 
-});
-
-
-// Book Appointment
-if (modalBookBtn) {
-
-    modalBookBtn.addEventListener("click", function() {
-        closeServiceModal();
-    });
-
-}
-    
 
     // ==========================================
     // APPOINTMENT FORM
     // ==========================================
-    const appointmentForm = document.getElementById("appointmentForm");
-    const formSuccess = document.getElementById("formSuccess");
+    const appointmentForm =
+        document.getElementById("appointmentForm");
+
+    const formSuccess =
+        document.getElementById("formSuccess");
 
     if (appointmentForm && formSuccess) {
 
@@ -166,6 +158,16 @@ if (modalBookBtn) {
 
         });
 
+    }
+
+
+    // ==========================================
+    // FOOTER YEAR
+    // ==========================================
+    const yearElement = document.getElementById("currentYear");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
 
 });
