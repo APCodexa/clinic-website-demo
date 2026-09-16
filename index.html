@@ -428,4 +428,70 @@
     <script src="script.js"></script>
 </body>
   </html>
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("serviceModal");
+    const cards = document.querySelectorAll(".service-card");
+
+    if (!modal || cards.length === 0) return;
+
+    const title = document.getElementById("modalTitle");
+    const desc = document.getElementById("modalDesc");
+    const includes = document.getElementById("modalIncludesText");
+    const closeBtn = document.querySelector(".close-modal");
+
+    cards.forEach(function (card) {
+
+        card.addEventListener("click", function () {
+
+            if (title) {
+                title.textContent =
+                    card.getAttribute("data-title") || "Service Details";
+            }
+
+            if (desc) {
+                desc.textContent =
+                    card.getAttribute("data-desc") ||
+                    "Please contact us for more information.";
+            }
+
+            if (includes) {
+                includes.textContent =
+                    card.getAttribute("data-includes") ||
+                    "Please contact us for more information.";
+            }
+
+            modal.classList.add("show");
+            document.body.classList.add("modal-open");
+
+        });
+
+    });
+
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            modal.classList.remove("show");
+            document.body.classList.remove("modal-open");
+        });
+    }
+
+
+    modal.addEventListener("click", function (event) {
+
+        if (event.target === modal) {
+            modal.classList.remove("show");
+            document.body.classList.remove("modal-open");
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
   
