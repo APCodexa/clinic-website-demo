@@ -534,4 +534,106 @@ input:focus, select:focus, textarea:focus {
         gap: 0;
     }
   }
-  
+  /* --- PREMIUM HERO POLISH --- */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    margin-bottom: 18px;
+    background: #e0f2fe;
+    color: var(--primary-dark);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hero-badge i {
+    font-size: 0.9rem;
+}
+
+.hero-trust {
+    display: flex;
+    gap: 22px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-trust div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+.hero-trust i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+
+/* Mobile Hero */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 35px 0 45px;
+    }
+
+    .hero-container {
+        gap: 25px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .hero-btns {
+        gap: 10px;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        text-align: center;
+        padding: 11px 18px;
+    }
+
+    .hero-trust {
+        gap: 12px;
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .hero-trust div {
+        font-size: 0.8rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-height: 280px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
